@@ -29,3 +29,36 @@ doskey /history
 
 git add . && git status && git commit -m "added"
 git push -u origin main
+
+
+
+
+
+
+
+docker
+docker --version
+docker -v
+docker info
+docker login
+docker run hello-world
+docker images
+docker ps -a
+docker run hello-world
+docker images
+docker ps -a
+docker pull centos
+dir
+ls
+docker run -it centos /bin/bash
+docker ps -a
+docker imaes
+docker images
+docker ps -a
+docker rm -f 9e5b5d7f79f5 2105d07f49f3 de1916d4de95
+docker ps -a
+docker images
+docker rmi -f feb5d9fea6a5 5d0da3dc9764
+docker images
+doskey history
+doskey /history
