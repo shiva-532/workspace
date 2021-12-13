@@ -1,0 +1,27 @@
+cd CLASSROOM
+git init
+git add .
+git status
+git add .
+git status
+git reset
+git status
+git add .
+git reset
+git add .
+git status
+git remote add origin https://github.com/vishymails/workspace.git
+git branch -M main
+git push -u origin main
+git config --global user.email "vishymails@gmail.com"
+git config --global user.name "vishymails"
+git remote add origin https://github.com/vishymails/workspace.git
+git status
+git push -u origin main
+git commit -m "added"
+git push -u origin main
+git add .
+git status
+git commit -m "added"
+git push -u origin main
+doskey /history
