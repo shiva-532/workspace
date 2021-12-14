@@ -84,3 +84,22 @@ docker ps -a
 docker rm -f 42618529a07f
 docker rmi -f e269d2855025
 docker images
+
+
+
+docker build -t microservices:1.0 .
+
+docker run -p 8080:9000 microservices:1.0
+
+
+User ARC and access :
+
+http://localhost:8080/oracleblr/greetOthers?details=Oracle_BLR
+
+
+IN DOCKER PLAYGROUND :
+
+docker images
+    2  docker pull vishymails/microservices:1.0
+    3  docker images
+    4  docker run -p 8080:9000 vishymails/microservices:1.0
