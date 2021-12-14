@@ -32,15 +32,6 @@ git push -u origin main
 
 
 
-docker build -t microservices:1.0 .
-
-docker run -p 8080:9000 microservices:1.0
-
-
-User ARC and access :
-
-http://localhost:8080/oracleblr/greetOthers?details=Oracle_BLR
-
 
 
 docker
@@ -69,3 +60,27 @@ docker rmi -f feb5d9fea6a5 5d0da3dc9764
 docker images
 doskey history
 doskey /history
+
+
+
+
+docker build -t microservices:1.0 .
+
+docker run -p 8080:9000 microservices:1.0
+
+
+User ARC and access :
+
+http://localhost:8080/oracleblr/greetOthers?details=Oracle_BLR
+
+
+
+
+docker images
+docker tag e269d2855025 vishymails/microservices:1.0
+docker images
+docker push vishymails/microservices:1.0
+docker ps -a
+docker rm -f 42618529a07f
+docker rmi -f e269d2855025
+docker images
