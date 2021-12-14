@@ -32,7 +32,14 @@ git push -u origin main
 
 
 
+docker build -t microservices:1.0 .
 
+docker run -p 8080:9000 microservices:1.0
+
+
+User ARC and access :
+
+http://localhost:8080/oracleblr/greetOthers?details=Oracle_BLR
 
 
 
