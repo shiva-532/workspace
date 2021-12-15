@@ -9,9 +9,12 @@ import org.springframework.web.client.RestTemplate;
 import com.bvr.models.CatalogItem;
 import com.bvr.models.Movie;
 import com.bvr.models.UserRatings;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+
 
 @RestController
 @RequestMapping("/catalog")
@@ -25,6 +28,7 @@ public class CatalogResource {
 	private RestTemplate restTemplate;
 	
 	@RequestMapping("/{userId}")
+	@HystrixCommand(fallbackMethod = "getFallbackCatalog")
 	public List<CatalogItem> getCatalog(@PathVariable("userId") String userId) {
 		
 		
@@ -38,5 +42,10 @@ public class CatalogResource {
 				.collect(Collectors.toList());
 		
 		
+	}
+	
+	
+	public List<CatalogItem> getFallbackCatalog(@PathVariable("userId") String userId) {
+		return Arrays.asList(new CatalogItem("No Movie at this time try after 1 hr ", "", 0));
 	}
 }
