@@ -33,6 +33,19 @@ public class DatabaseServiceApplication implements CommandLineRunner{
 		repository.save(new Book("AutoML"));
 		repository.save(new Book("Java"));
 		
+		
+		System.out.println("\n find all records0");
+		
+		repository.findAll().forEach(x -> System.out.println(x));
+		
+		System.out.println("\n find by id");
+		
+		repository.findById(3l).ifPresent(x -> System.out.println(x));
+		
+		System.out.println("\n find Ny Name records0");
+		
+		repository.findByName("Java").forEach(x -> System.out.println(x));
+		
 	}
 	
 }
