@@ -17,3 +17,35 @@ docker ps -a
 docker run -it centos /bin/bash
 docker ps -a
 doskey /history
+
+
+
+docker ps -a
+docker rm -f e0a7e5a008bd
+docker rm -f 0a0f2b820c26
+docker images
+docker rmi -f feb5d9fea6a5 5d0da3dc9764
+docker pull jenkins
+docker pull jenkins:2.60.3
+docker run jenkins
+docker run jenkins:2.60.3
+docker run -p 8080:8080 -p 50000:50000 jenkins:2.60.3
+docker images
+docker history cd14cecfdb3a
+docker run -p 9090:8080 -p 50000:50000 jenkins:2.60.3
+doskey /history
+
+
+
+docker stop jenkins:2.60.3
+docker ps -a
+docker stop 6af2cc882597
+docker ps -a
+docker stop b92a74bf5ec5
+docker ps -a
+docker stop bfa13091cb2a
+docker start b92a74bf5ec5
+doskey /history
+
+
+
