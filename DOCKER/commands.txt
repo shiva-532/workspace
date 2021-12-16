@@ -88,4 +88,10 @@ doskey /history
 
 
 
+example4
 
+docker build -t example4:1.0 .
+docker run -it example4:1.0
+git add .
+git commit -m added
+git push origin main
