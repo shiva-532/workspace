@@ -63,3 +63,29 @@ docker unpause 005748bef92e
 docker ps
 docker kill 005748bef92e
 doskey /history
+
+
+
+
+cd EXAMPLE1
+dir
+docker build -t example1:1.0 .
+docker images
+docker run example1:1.0
+cd ..
+cd EXAMPLE3
+ls
+dir
+docker build -t example3:1.0 .
+docker run example3:1.0
+docker images
+docker ps -a
+cd ..
+git add .
+git commit -m added
+git push origin main
+doskey /history
+
+
+
+
