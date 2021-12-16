@@ -49,3 +49,17 @@ doskey /history
 
 
 
+
+docker run -p 9090:8080 -p 50000:50000 jenkins:2.60.3
+docker ps
+docker top
+docker top 005748bef92e
+docker stats 005748bef92e
+cls
+docker ps
+docker pause 005748bef92e
+docker ps
+docker unpause 005748bef92e
+docker ps
+docker kill 005748bef92e
+doskey /history
