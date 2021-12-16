@@ -1,0 +1,19 @@
+CD DOCKER
+cls
+docker
+docker --version
+docker -v
+docker version
+docker images
+docker ps
+docker ps -a
+docker info
+docker images
+docker pull hello-world
+docker run helloworld
+docker run hello-world
+docker images
+docker ps -a
+docker run -it centos /bin/bash
+docker ps -a
+doskey /history
